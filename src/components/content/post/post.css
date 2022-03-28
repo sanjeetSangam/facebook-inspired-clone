@@ -1,0 +1,65 @@
+.post {
+  width: 100%;
+  margin-top: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  background: var(--color-white);
+  box-shadow: var(--shadow);
+  border-radius: var(--radius);
+}
+
+.post_section {
+  display: flex;
+  margin: auto;
+  width: 95%;
+  border-bottom: 1px solid lightgray;
+  padding: 0.7rem 0;
+  gap: 1rem;
+}
+
+.post_section > form {
+  flex: 1;
+  display: flex;
+  gap: 1rem;
+}
+
+.post_section > form > input {
+  padding: 0.5rem;
+  border-radius: var(--radius);
+  background: var(--body-color);
+}
+
+.post_section > form > button {
+  display: none;
+}
+
+.post_input {
+  flex: 1;
+}
+
+.dummy_options {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 95%;
+  padding: 0.7rem;
+}
+
+.dummy_options > div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  padding: 0.5rem;
+  cursor: pointer;
+}
+
+.dummy_options > div:hover {
+  border-radius: var(--radius);
+  background: var(--body-color);
+}
+
+.dummy_options > div > h3 {
+  font-size: medium;
+}

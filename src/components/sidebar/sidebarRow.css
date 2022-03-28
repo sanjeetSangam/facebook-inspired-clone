@@ -1,0 +1,22 @@
+.sidebarRow {
+  display: flex;
+  align-items: center;
+  padding: 1rem 1rem 1rem 1rem;
+  cursor: pointer;
+  gap: 1rem;
+  font-size: 1.15rem;
+}
+
+.sidebarRow:hover {
+  background: var(--hover-color);
+  border-radius: 0.7rem;
+}
+
+.sidebarRow > h4 {
+  font-weight: 300;
+}
+
+.sidebar_icons {
+  color: var(--facebook-color);
+  font-size: 1.7rem;
+}

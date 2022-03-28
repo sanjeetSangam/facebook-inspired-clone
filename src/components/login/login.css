@@ -1,0 +1,59 @@
+.login__main {
+  width: 100%;
+  min-height: 100vh;
+  max-height: 100vh;
+  background-image: url("https://cdn.wallpapersafari.com/23/82/JY6D8x.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+.login {
+  width: 50%;
+  margin: auto;
+  min-height: 100vh;
+  max-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: sticky;
+  z-index: 1000;
+}
+
+.login__logo {
+  width: 100%;
+  border-radius: 1rem;
+  overflow: hidden;
+  cursor: pointer;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+    rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+    rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+  background: rgb(255, 255, 255);
+  transition: 1s;
+}
+
+.login button {
+  background: var(--facebook-color);
+  width: 100%;
+  padding: 1rem 1rem 1rem 1rem;
+  font-size: 2rem;
+  cursor: pointer;
+  color: var(--color-white);
+  font-weight: 600;
+  transition: 1s;
+}
+
+.login button:hover {
+  background: var(--color-white);
+  color: var(--facebook-color);
+}
+
+.cover {
+  position: absolute;
+  height: 100%;
+  top: 0;
+  z-index: 1;
+  width: 100%;
+  background-color: rgb(2, 2, 2);
+  opacity: 0.5;
+}

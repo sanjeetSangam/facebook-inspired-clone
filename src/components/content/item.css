@@ -1,0 +1,25 @@
+.story_item {
+  position: relative;
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 125px;
+  height: 200px;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  transition: 0.5s;
+  cursor: pointer;
+}
+
+.story_avatar {
+  margin: 0.5rem;
+  border: 5px solid var(--facebook-color);
+}
+
+.story_item > h4 {
+  color: var(--color-white);
+  position: absolute;
+  bottom: 0.9rem;
+  left: 50%;
+  transform: translateX(-50%);
+}

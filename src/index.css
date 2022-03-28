@@ -1,0 +1,43 @@
+@import url("https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+  outline: none;
+  border: 0;
+  font-family: "PT Sans", sans-serif;
+}
+
+:root {
+  --body-color: #f0f2f5;
+  --facebook-color: #1b73e4;
+  --menu-color: #65676b;
+  --color-white: #fff;
+  --hover-color: #e0e1e2;
+
+  --navbar-height: 3.5rem;
+  --menu-size: 2rem;
+
+  --shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
+    rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+
+  --radius: 0.7rem;
+}
+
+body {
+  background: var(--body-color);
+  position: relative;
+}
+
+a {
+  color: var(--menu-color);
+}
+
+.main_body {
+  display: grid;
+  grid-template-columns: 0.5rem 1fr 0.3fr 2fr 0.3fr 1fr 0.5rem;
+  margin-top: 1.2rem;
+}

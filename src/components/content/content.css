@@ -1,0 +1,5 @@
+.content {
+  padding: 0 0.5rem 0 0.5rem;
+  grid-column: 4/5;
+  width: 100%;
+}

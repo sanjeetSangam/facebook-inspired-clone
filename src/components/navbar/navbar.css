@@ -1,0 +1,94 @@
+nav {
+  height: var(--navbar-height);
+  background: var(--color-white);
+  display: grid;
+  grid-template-columns: 1rem 1fr 1.25fr 1fr 1rem;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.logo {
+  grid-column: 2/3;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  height: var(--navbar-height);
+}
+
+.logo img {
+  height: 73%;
+}
+
+.logo form {
+  height: 80%;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: var(--body-color);
+  padding: 0.7rem;
+  border-radius: 2rem;
+}
+
+.logo form input {
+  background: var(--body-color);
+  height: 100%;
+}
+
+.menus {
+  grid-column: 3/4;
+  height: var(--navbar-height);
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.menus a {
+  font-size: var(--menu-size);
+  height: 87%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.menus a:hover {
+  border-radius: 1rem;
+  background: var(--hover-color);
+}
+
+.profile {
+  grid-column: 4/5;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 0.5rem;
+  height: var(--navbar-height);
+}
+
+.profile > div {
+  height: 73%;
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+  border-radius: 1rem;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+}
+
+.profile > div:hover {
+  background: var(--hover-color);
+}
+
+.profile_icons {
+  background: var(--body-color);
+  font-size: 1.2rem;
+}
+
+/* menus------------------ */
+
+.home__logo {
+  color: var(--facebook-color);
+  border-bottom: 5px solid var(--facebook-color);
+}
