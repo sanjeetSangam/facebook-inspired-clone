@@ -23,14 +23,30 @@
   gap: 1rem;
 }
 
-.post_section > form > input {
+.post_section > form input {
   padding: 0.5rem;
   border-radius: var(--radius);
   background: var(--body-color);
 }
 
 .post_section > form > button {
-  display: none;
+  background: skyblue;
+  padding: 0 2rem;
+  cursor: pointer;
+  border-radius: var(--radius);
+  font-size: medium;
+  transition: 0.2s;
+}
+
+.post_section > form > button:hover {
+  background: rgb(160, 39, 39);
+  color: wheat;
+}
+
+.post_section > form > button:disabled {
+  background: gray;
+  cursor: default;
+  color: darkgray;
 }
 
 .post_input {
@@ -62,4 +78,88 @@
 
 .dummy_options > div > h3 {
   font-size: medium;
+}
+
+.imgUpload {
+  position: relative;
+}
+
+form .imgUpload {
+  position: relative;
+  width: 30%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  padding: 0.5rem;
+  cursor: pointer;
+  border-radius: var(--radius);
+  background: var(--body-color);
+  overflow: hidden;
+}
+
+form .imgUpload h3 {
+  font-size: medium;
+}
+
+form .imgUpload input {
+  position: absolute;
+  cursor: pointer;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  opacity: 0;
+}
+
+.loading_animation {
+  padding: 0.5rem;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.loading_animation progress {
+  width: 100%;
+  -webkit-appearance: none;
+}
+
+::-webkit-progress-bar {
+  background-color: rgb(255, 255, 255);
+  border-radius: 2rem;
+}
+
+::-webkit-progress-value {
+  background: var(--facebook-color);
+  border-radius: 2rem;
+}
+
+@media screen and (max-width: 1263px) {
+  .post_section {
+    flex-wrap: wrap;
+  }
+
+  .post_section > form > button {
+    padding: 0.5rem 2rem;
+  }
+
+  .post_section > form {
+    flex-wrap: wrap;
+  }
+}
+
+@media screen and (max-width: 414px) {
+  .post_section {
+    flex-wrap: wrap;
+  }
+
+  .post_section > form {
+    flex-wrap: wrap;
+  }
+
+  .post_section > form > button {
+    padding: 0.5rem 2rem;
+  }
 }

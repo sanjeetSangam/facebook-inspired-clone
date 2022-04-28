@@ -1,26 +1,21 @@
-import { Navbar } from "./components/navbar/Navbar";
-import { Sidebar } from "./components/sidebar/Sidebar";
-import { Content } from "./components/content/Content";
-import { Widgets } from "./components/rightC/Widgets";
 import { Login } from "./components/login/Login";
-import { useStateValue } from "./context/StateProvider";
+
+import { Routes, Route } from "react-router-dom";
+import Allhome from "./components/Allhome";
+import { useSelector } from "react-redux";
 
 function App() {
-  const [{ user }, dispatch] = useStateValue();
+  let user = useSelector((store) => store.user.user);
 
   return (
     <div className="App">
-      {!user ? (
+      {user.name == undefined ? (
         <Login />
       ) : (
         <>
-          <Navbar />
-
-          <div className="main_body">
-            <Sidebar />
-            <Content />
-            <Widgets />
-          </div>
+          <Routes>
+            <Route path="/" element={<Allhome />} />
+          </Routes>
         </>
       )}
     </div>

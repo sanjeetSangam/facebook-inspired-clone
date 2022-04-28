@@ -10,9 +10,10 @@ import { Avatar } from "@mui/material";
 
 import { styled } from "@mui/material/styles";
 import Badge from "@mui/material/Badge";
+import { useSelector } from "react-redux";
 
 export const Widgets = () => {
-  const [{ user }, dispatch] = useStateValue();
+  let user = useSelector((store) => store.user.user);
 
   const StyledBadge = styled(Badge)(({ theme }) => ({
     "& .MuiBadge-badge": {
@@ -54,9 +55,9 @@ export const Widgets = () => {
           anchorOrigin={{ vertical: "bottom", horizontal: "right" }}
           variant="dot"
         >
-          <Avatar src={user.photoURL} className="profile__nav" />
+          <Avatar src={user.profileUrl} className="profile__nav" />
         </StyledBadge>
-        <p>{user.displayName}</p>
+        <p>{user.name}</p>
       </div>
     </div>
   );

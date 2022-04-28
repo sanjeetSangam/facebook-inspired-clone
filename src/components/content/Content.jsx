@@ -5,9 +5,12 @@ import { Story } from "./Story";
 
 import db from "../firebases/firebase";
 import { useState, useEffect } from "react";
+import { useSelector } from "react-redux";
 
 export const Content = () => {
   const [posts, setPosts] = useState([]);
+
+  let user = useSelector((store) => store.user.user);
 
   useEffect(() => {
     db.collection("posts")
@@ -30,6 +33,8 @@ export const Content = () => {
       {posts.map((post) => (
         <PostItem
           key={post.id}
+          postID={post.id}
+          user={user}
           profilePic={post.data.profilePic}
           message={post.data.message}
           timestamp={post.data.timestamp}

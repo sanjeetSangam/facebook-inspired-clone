@@ -55,3 +55,9 @@
 .chat__list:hover {
   background: var(--hover-color);
 }
+
+@media screen and (max-width: 1063px) {
+  .widgets {
+    display: none;
+  }
+}

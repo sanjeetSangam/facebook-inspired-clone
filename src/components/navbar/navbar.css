@@ -6,7 +6,7 @@ nav {
   align-items: center;
   position: sticky;
   top: 0;
-  z-index: 100;
+  z-index: 1000;
 }
 
 .logo {
@@ -91,4 +91,49 @@ nav {
 .home__logo {
   color: var(--facebook-color);
   border-bottom: 5px solid var(--facebook-color);
+}
+
+@media screen and (max-width: 940px) {
+  .menus {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 635px) {
+  .profile_icons {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 414px) {
+  nav {
+    grid-template-columns: 1rem 1fr 1fr;
+  }
+
+  .logo {
+    grid-column: 2/3;
+  }
+
+  .profile {
+    grid-column: 3/4;
+  }
+
+  .logo form {
+    width: 5rem;
+    overflow: hidden;
+  }
+
+  .logo form input {
+    width: 5rem;
+  }
+
+  .profile > .profile_icons {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 679px) {
+  .profile > .profile_icons {
+    display: none;
+  }
 }

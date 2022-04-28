@@ -5,6 +5,7 @@
   background: var(--color-white);
   box-shadow: var(--shadow);
   overflow: hidden;
+  position: relative;
 }
 
 .post__top {
@@ -62,4 +63,154 @@
 
 .post__buttons > div:hover {
   background: var(--body-color);
+}
+
+.addComments {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: var(--facebook-color);
+}
+
+.addComments form {
+  margin: 0.5rem;
+  display: flex;
+  gap: 1rem;
+  width: 100%;
+}
+
+.addComments input {
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  width: 100%;
+}
+
+.addComments input:focus {
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+}
+
+.addComments button {
+  padding: 0.5rem 2rem;
+  border-radius: 0.5rem;
+  background: rgb(121, 4, 115);
+  color: var(--color-white);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+.addComments button:hover {
+  background: rgb(187, 69, 14);
+  color: rgb(255, 255, 255);
+}
+
+.addComments button:disabled {
+  background: gray;
+  border: var(--color-white);
+  cursor: default;
+  color: beige;
+}
+
+.show__comments {
+  padding: 0.5rem;
+}
+
+.show__comments > strong {
+  color: rgb(20, 14, 75);
+}
+
+.show__comments p {
+  display: flex;
+  gap: 0.5rem;
+  padding: 0 0.3rem;
+}
+
+.commets_list {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin: 0.5rem 0;
+}
+
+.commets_list p {
+  background: rgb(214, 68, 10);
+  border-radius: 0.5rem;
+  padding: 0.5rem 3rem 0.5rem 0.5rem;
+  display: flex;
+  flex-direction: column;
+  line-height: 8px;
+  color: white;
+}
+
+.all__comments {
+  position: absolute;
+  z-index: 500;
+  left: 50%;
+  right: 0;
+  top: 50%;
+  display: none;
+}
+
+.all__comments.showing {
+  display: flex;
+  flex-direction: column;
+  background: var(--facebook-color);
+  border-radius: 0.5rem 0 0 0;
+  padding: 1rem;
+  max-height: 50%;
+  min-height: 50%;
+  min-width: 50%;
+  overflow-y: scroll;
+}
+
+.all__comments.showing::-webkit-scrollbar {
+  width: 10px;
+}
+
+.all__comments .commets_list p {
+  line-height: 1rem;
+  padding: 0.5rem 2rem 0.5rem 0.5rem;
+}
+
+.comments__head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: var(--color-white);
+  padding: 0 0.5rem;
+  border-radius: 0.5rem;
+}
+
+.comments__head button {
+  background: rgb(255, 227, 227);
+  padding: 0.5rem;
+  color: white;
+  border-radius: 2rem;
+  cursor: pointer;
+}
+
+.overlap {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  background: rgba(0, 1, 12, 0.76);
+  display: none;
+}
+
+.overlap.active {
+  display: block;
+}
+
+.show__more {
+  padding: 0.3rem 1rem;
+  border-radius: 0.5rem;
+  background: #570353;
+  color: white;
+  cursor: pointer;
 }

@@ -10,17 +10,26 @@ import { BsMessenger } from "react-icons/bs";
 import { IoMdNotifications } from "react-icons/io";
 import { IoMdArrowDropdown } from "react-icons/io";
 
-import { useStateValue } from "../../context/StateProvider";
-
 import { BsSearch } from "react-icons/bs";
 
 import logo from "../../assets/logo.png";
 import { Avatar } from "@mui/material";
+import { useSelector } from "react-redux";
+
+import Cookies from "js-cookie";
+import { useNavigate } from "react-router-dom";
 
 export const Navbar = () => {
-  const [{ user }, dispatch] = useStateValue();
+  let user = useSelector((store) => store.user.user);
 
-  // console.log(user.photoURL);
+  let navigate = useNavigate();
+
+  const signOut = () => {
+    Cookies.remove("fbuser");
+    alert("You have logout successfully! See you :)");
+    navigate("/");
+    window.location.reload();
+  };
 
   return (
     <nav>
@@ -55,19 +64,13 @@ export const Navbar = () => {
         </a>
       </div>
       <div className="profile">
-        <div
-          className="profile_section"
-          onClick={() => {
-            alert("You have Successfully LOGOUT!");
-            window.location.reload();
-          }}
-        >
+        <div className="profile_section" onClick={signOut}>
           <Avatar
-            src={user.photoURL}
+            src={user.profileUrl}
             className="profile__nav"
             sx={{ width: 30, height: 30 }}
           />
-          <a href="#">{user.displayName.split(" ")[0]}</a>
+          <a href="#">Logout</a>
         </div>
 
         <div className="profile_icons">

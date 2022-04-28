@@ -9,14 +9,14 @@ import { MdOutlineOndemandVideo } from "react-icons/md";
 import { IoMdTimer } from "react-icons/io";
 import { MdSaveAlt } from "react-icons/md";
 
-import { useStateValue } from "../../context/StateProvider";
+import { useSelector } from "react-redux";
 
 export const Sidebar = () => {
-  const [{ user }, dispatch] = useStateValue();
+  let user = useSelector((store) => store.user.user);
 
   return (
     <div className="sidebar">
-      <SidebarRow title={user.displayName.split(" ")[0]} src={user.photoURL} />
+      <SidebarRow title={user.name.split(" ")[0]} src={user.profileUrl} />
       <SidebarRow title="Friends" Icon={FaUserFriends} />
       <SidebarRow title="Groups" Icon={HiUserGroup} />
       <SidebarRow title="Marketplace" Icon={FaMapMarkedAlt} />
