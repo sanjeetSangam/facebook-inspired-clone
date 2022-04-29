@@ -21,7 +21,7 @@ Facebook is social media plateform where people from all over the world came and
 Go to this link:-
 
 ```
-  fb-inspired-clone.netlify.app/
+  https://facebook-in.netlify.app/
 ```
 
 
