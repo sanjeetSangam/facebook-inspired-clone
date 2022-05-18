@@ -21,7 +21,7 @@ Facebook is social media plateform where people from all over the world came and
 Go to this link:-
 
 ```
-  https://facebook-in.netlify.app/
+  https://posting-app.netlify.app/
 ```
 
 
